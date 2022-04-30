@@ -1,5 +1,5 @@
 <?php
-function debug($data, $die = false)
+function debug($data, $die = true)
 {
     $info = debug_backtrace();
     $file = file($info[0]['file']);

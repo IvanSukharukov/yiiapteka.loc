@@ -2,12 +2,13 @@
 
 namespace app\modules\import\controllers;
 
+use app\modules\import\models\Import;
 use yii\web\Controller;
 
 /**
  * Default controller for the `import` module
  */
-class DefaultController extends Controller
+class ImportController extends Controller
 {
     /**
      * Renders the index view for the module
@@ -15,7 +16,10 @@ class DefaultController extends Controller
      */
     public function actionIndex()
     {
-        echo 'test';
+        $import = new Import();
+//        $drugs = $import->getDrugs();
+        $drugs = $import->getDrugTest();
+        debug($drugs);
         return $this->render('index');
     }
 }
