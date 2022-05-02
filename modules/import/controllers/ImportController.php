@@ -17,8 +17,8 @@ class ImportController extends Controller
     public function actionIndex()
     {
         $import = new Import();
-//        $drugs = $import->getDrugs();
-        $drugs = $import->getDrugTest();
+        $drugs = $import->getDrugs();
+//        $drugs = $import->getDrugTest();
         debug($drugs);
         return $this->render('index');
     }
